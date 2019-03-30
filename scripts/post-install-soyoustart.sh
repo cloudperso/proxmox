@@ -36,3 +36,5 @@ EOF
 echo "Random password for root user: $(openssl rand -base64 24)"
 echo "Please copy-paste it 2 times to apply"
 passwd root
+
+echo "PLEASE REBOOT YOUR NODE NOW!"
