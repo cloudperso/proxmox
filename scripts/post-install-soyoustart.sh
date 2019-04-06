@@ -19,13 +19,6 @@ function error_exit
    exit 1
 }
 
-# Disable RAID for 2 last disk
-echo -e "$INFO Disabling RAID for 2 last disks"
-mdadm --manage /dev/md2 --fail /dev/sdc2
-mdadm --manage /dev/md2 --fail /dev/sdd2
-mdadm --manage /dev/md2 --remove /dev/sdc2
-mdadm --manage /dev/md2 --remove /dev/sdd2
-
 # Disable ipv6
 echo -e "$INFO Disabling IPv6"
 echo "# Désactivation ipv6" >> /etc/sysctl.conf
